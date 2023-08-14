@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 th:text="'Name is '+${name}"></h1>
+<h1 th:text="'Age is '+${age}"></h1>
+<h1 th:text="'Date is '+${currentDate}"></h1>
+<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+
+<!-- this is the creating of local variables -->
+<div th:with="a=5,b=60,n=${name}">
+<h2 th:text="'value of a is: '+${a}+' and value of b is: '+${b}+' and sum is: '+${a+b}"></h2>
+
+</div>
+<h2 th:text="'value of a is '+${a}">
+</h2>
+<h2 th:text="'value of b is '+${b}"></h2>
+
+</body>
+</html>
